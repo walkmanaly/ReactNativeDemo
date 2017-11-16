@@ -5,6 +5,7 @@
  */
 
 import React, { Component } from 'react';
+import CButton from './CButton';
 import {
   AppRegistry,
   StyleSheet,
@@ -15,17 +16,10 @@ import {
 export default class ReactNativeDemo extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+      <View style={{margin: 100}}>
+        <CButton style={{height: 50}} enabled={false} />
+        <CButton style={{top: 30, height: 50}} />
+        <CButton style={{top: 30, height: 50}} />
       </View>
     );
   }
@@ -38,16 +32,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+
 });
 
 AppRegistry.registerComponent('ReactNativeDemo', () => ReactNativeDemo);
